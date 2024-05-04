@@ -25,6 +25,8 @@ public class UserController {
     public ResponseEntity<Integer> createUser(@RequestBody CreateUserPayload payload) {
         // TODO: Create an user entity with information given in the payload, store it in the database
         //       and return the id of the user in 200 OK response
+
+        // Assume email is a unique key for each user
         if (userRepository.findByEmail(payload.getEmail()) == null) {
             User newUser = new User();
             newUser.setName(payload.getName());
@@ -43,6 +45,8 @@ public class UserController {
         // TODO: Return 200 OK if a user with the given ID exists, and the deletion is successful
         //       Return 400 Bad Request if a user with the ID does not exist
         //       The response body could be anything you consider appropriate
+
+        // if user doesn't exist in the database, then report an error
         Optional<User> user = userRepository.findById(userId);
         if (!user.isPresent()) {
             return ResponseEntity.badRequest().body("User not found with ID: " + userId);

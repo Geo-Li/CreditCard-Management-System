@@ -16,5 +16,4 @@ public interface CreditCardRepository extends JpaRepository<CreditCard, Integer>
     List<CreditCard> findByOwnerId(int userId);
     // Each credit card should have a unique card number
     CreditCard findByNumber(String number);
-    List<BalanceHistory> findBalanceHistoryByNumber(String number);
 }

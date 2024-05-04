@@ -30,8 +30,4 @@ public class User {
     //     and user by a credit card.
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
     private Set<CreditCard> creditCards = new HashSet<>();
-
-    public void addCreditCardToUser(CreditCard creditCard) {
-        creditCards.add(creditCard);
-    }
 }

@@ -69,6 +69,7 @@ public class CreditCard {
     private List<BalanceHistory> balanceHistories = new ArrayList<>();
 
     // This will be the actual balance history information passed in from requests(payloads)
+    // This is for testing purpose, not implemented
     @Transient
     private TreeMap<LocalDate, Double> payloadHistories = new TreeMap<>();
 }
