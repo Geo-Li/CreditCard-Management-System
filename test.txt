@@ -1,0 +1,65 @@
+Users
+{
+    "name": "geo li",
+    "email": "zhuoyul4@uci.edu"
+}
+{
+    "name": "geo li",
+    "email": "kyrieprise@gmail.com"
+}
+{
+    "name": "geo li",
+    "email": "zhuoyuanli2025@u.northwestern.edu"
+}
+{
+    "name": "fake",
+    "email": "fake"
+}
+http://localhost:8080/user?userId=
+CreditCard
+{
+    "userId": "1",
+    "cardIssuanceBank": "boa",
+    "cardNumber": "1"
+}
+
+
+
+http://localhost:8080/credit-card:update-balance
+[
+    {
+        "creditCardNumber": "1",
+        "balanceDate": "2023-12-25",
+        "balanceAmount": "1000"
+    },
+    {
+        "creditCardNumber": "1",
+        "balanceDate": "2024-01-01",
+        "balanceAmount": "1200"
+    },
+    {
+        "creditCardNumber": "1",
+        "balanceDate": "2024-01-02",
+        "balanceAmount": "1000"
+    },
+    {
+        "creditCardNumber": "1",
+        "balanceDate": "2023-12-31",
+        "balanceAmount": "900"
+    }
+]
+[
+    {
+        "creditCardNumber": "1",
+        "balanceDate": "2024-01-01",
+        "balanceAmount": "1000"
+    }
+]
+
+http://localhost:8080/credit-card:date
+{
+    "number": "1",
+    "date": "2023-12-31"
+}
+
+http://localhost:8080/credit-card:date?number=1&date=2023-12-31
